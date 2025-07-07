@@ -1,0 +1,1 @@
+@reference "tailwindcss"{}@layer components{.section--recomendation{@apply -mt-6 lg:mt-6 overflow-x-auto{}}.section--recomendation__wrapper{@apply p-4 -mx-4 lg:rounded-xl lg:p-10 lg:-mx-10{}}}
