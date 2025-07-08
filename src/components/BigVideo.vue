@@ -7,7 +7,7 @@
         <div class="big-video__description bg-black" style="--instream-bg: url('../image/instream.png');">
             <span class="big-video__description__title">Dedi Mulyadi Soroti Pembangunan Tempat Wisata di Lembang yang Picu Bencana</span>
             <span class="big-video__description__text">Gubernur Jawa Barat Dedi Mulyadi buka suara terkait bencana yang melanda kawasan Lembang. Dedi Mulyadi menilai pembangunan vila hingga kafe di tempat wisata jadi pemicu bencana di Lembang.</span>
-            <a href="#" class="big-video__description__button bg-primary hover:bg-white hover:text-primary">Tonton Selengkapnya</a>
+            <a href="#" class="big-video__description__button bg-secondary hover:bg-white hover:text-primary">Tonton Selengkapnya</a>
         </div>
     </div>
 </template>

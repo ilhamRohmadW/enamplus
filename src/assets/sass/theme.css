@@ -26,6 +26,12 @@
   .section__title__more {
     @apply flex gap-2 items-center text-sm font-normal hover:underline {}
   }
+  .section--row {
+    @apply lg:flex lg:items-start lg:gap-8 {}
+  }
+  .section--aside {
+    @apply lg:w-[300px] lg:shrink-0 {}
+  }
   .item__figure {
     @apply relative rounded-lg overflow-hidden mb-2.5 lg:mb-4 {}
   }
@@ -50,10 +56,31 @@
   .item--story .item__video {
     @apply -mx-6 w-[168px] z-30 {}
   }
+  .item--row {
+    @apply flex items-start gap-2.5 {}
+  }
+  .item--row .item__figure {
+    @apply w-44 shrink-0 mb-0 {}    @apply lg:w-40 {}
+  }
+  .item--row .item__title {
+    @apply line-clamp-3 leading-tight text-sm lg:mb-0.5 {}
+  }
+  .item--row .item__detail {
+    @apply flex-col items-start lg:gap-0.5 {}
+  }
   .news-list {
     @apply relative grid grid-cols-2 lg:grid-cols-4 -m-2 {}
   }
   .news-list .item {
     @apply block rounded-lg pt-2 px-2 pb-4 {}
+  }
+  .news-list-row {
+    @apply flex flex-col gap-4 mt-5 {}    @apply lg:mt-0 {}
+  }
+  .topik-list {
+    @apply flex items-center flex-wrap gap-3 text-sm {}
+  }
+  .topik-list__link {
+    @apply px-4 py-2 rounded-full transition-colors w-full h-full block {}
   }
 }
