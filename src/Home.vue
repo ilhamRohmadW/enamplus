@@ -30,6 +30,6 @@ import LogoTerang from './assets/image/terang-color.png';
         <VideoList title="VIDEO POPULER"/>
         <VideoList title="SEPAK BOLA"/>
     </main>
-    <Footer6/>
+  <Footer6/>
 </template>
 

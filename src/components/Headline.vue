@@ -13,19 +13,19 @@
                 </div>
                 <div class="big-video__description bg-black" style="--instream-bg: url('../image/instream.png');">
                     <div class="live-info">
-                        <span class="live-info__badge bg-[#FF0000] text-white">
+                        <span class="live-info__badge bg-red-500 text-white">
                             LIVE NOW
                         </span>
-                        <div class="live-info__meta flex items-center gap-2 mt-2">
+                        <div class="live-info__meta">
                             <span class="live-info__title text-secondary font-medium">
                             Live Liputan6 Update
                             </span>
-                            <span class="live-info__views flex items-center gap-1 text-gray-400 text-sm">
-                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10 4.5C4.5 4.5 1.73 10 1.73 10s2.77 5.5 8.27 5.5S18.27 10 18.27 10 15.5 4.5 10 4.5zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/>
-                                <circle cx="10" cy="10" r="2.5" fill="currentColor" />
-                            </svg>
-                            1,320 views
+                            <span class="live-info__views text-gray-400">
+                                <svg class="live-info__views__icon text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 4.5C4.5 4.5 1.73 10 1.73 10s2.77 5.5 8.27 5.5S18.27 10 18.27 10 15.5 4.5 10 4.5zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/>
+                                    <circle cx="10" cy="10" r="2.5" fill="currentColor" />
+                                </svg>
+                                1,320 views
                             </span>
                         </div>
                     </div>
