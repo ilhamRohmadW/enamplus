@@ -8,11 +8,10 @@ import Footer6 from './components/Footer.vue'
   <Header6/>
     <main class="main flex flex-col mb-6 lg:mb-10">
       <Segment/>
-
+      kura kura
     </main>
     <Footer6/>
 </template>
 <style>
     @import './assets/sass/components/readpage.css';
 </style>
-
