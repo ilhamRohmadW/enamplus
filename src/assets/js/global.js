@@ -107,6 +107,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Isotope filter
+    setTimeout(() => {
+        const grid = document.querySelector('.video-tab-grid');
+        const iso = new Isotope(grid, {
+            itemSelector: '.video-card',
+            layoutMode: 'fitRows'
+        });
+        
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filterValue = this.getAttribute('data-filter');
+                iso.arrange({ filter: filterValue });
+            });
+        });
+    }, 100);
+    
+
+
     const storySwiper = new Swiper('.story__swiper', {
         loop: true,
         slidesPerView: "auto",
