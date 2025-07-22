@@ -1,4 +1,5 @@
 @reference "tailwindcss"
+@reference "../theme.css"
 .tab
     &-filter
         @apply flex gap-2
@@ -6,7 +7,7 @@
         @apply font-semibold border text-sm rounded-full px-4 py-2 
         &:hover,
         &.active
-            @apply text-red-500 border-red-500/20 bg-red-500/10
+            @apply text-primary border-primary/20 bg-primary/10
 
 .video
     &-tab

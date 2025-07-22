@@ -1,4 +1,4 @@
-@reference "tailwindcss" {}.tab-filter {
+@reference "tailwindcss" {}@reference "../theme.css" {}.tab-filter {
   @apply flex gap-2 {}
 }
 
@@ -7,7 +7,7 @@
 }
 
 .tab-btn:hover, .tab-btn.active {
-  @apply text-red-500 border-red-500/20 bg-red-500/10 {}
+  @apply text-primary border-primary/20 bg-primary/10 {}
 }
 
 .video-tab-grid {
