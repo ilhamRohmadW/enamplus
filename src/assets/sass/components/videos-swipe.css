@@ -1,5 +1,9 @@
-@reference "tailwindcss" {}.section--video__swiper {
-  @apply -m-4 relative p-4 {}  @apply lg:-mx-6 lg:px-3 {}
+@reference "tailwindcss" {}.section--video {
+  @apply overflow-x-hidden {}
+}
+
+.section--video__swiper {
+  @apply -my-4 -mx-7 relative p-4 {}  @apply lg:-mx-6 lg:px-3 {}
 }
 
 .section--video__swiper .swiper-slide {
