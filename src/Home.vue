@@ -16,7 +16,6 @@ import LogoTerang from './assets/image/terang-color.png';
   <Header6/>
     <main class="main flex flex-col mb-6 lg:mb-10">
       <Segment/>
-      <span class="bg-red-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nemo, architecto rem eveniet hic ipsum soluta ipsam quod nobis dolorum, eum illum, alias praesentium excepturi esse atque? Dolor, adipisci necessitatibus.</span>
         <Headline/>
         <Recommend/>
         <VideoList title="VIDEO TERKINI" titleIcon="true"/>
