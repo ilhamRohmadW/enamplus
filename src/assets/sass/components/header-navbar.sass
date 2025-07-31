@@ -4,19 +4,21 @@
     .header
         @apply inset-x-0 z-20 sticky top-0 transition-transform shadow-md duration-500
         &--navbar
-            @apply flex items-center justify-between py-3 gap-6
+            @apply flex items-center justify-between py-4 gap-6
         .container
             @apply mx-auto max-w-screen-lg px-4 relative
         &.--unsticky
             @apply -translate-y-13
-            @apply lg:-translate-y-15
+            @apply lg:-translate-y-17
         &__menu
             @apply size-7 flex items-center justify-center cursor-pointer
             @apply lg:hidden
         &--logo
             @apply flex-1 
+            @apply lg:w-[170px] lg:flex-none
             &__link
                 @apply h-7 block 
+                @apply h-8
             &__image
                 @apply w-auto h-full object-contain
         &--search
