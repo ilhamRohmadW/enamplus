@@ -32,23 +32,51 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     const header = document.querySelector('.header')
     if (header) {
-        const headerMenu = header.querySelector('.header__menu'),
-        navbarCollapsed = document.querySelector('.navbar--collapsed'),
-        navbarCollapsedClose = document.querySelector('.navbar--collapsed__top__close')
+        const headerCollapsed = document.querySelector('.header--collapsed')
+    let search = header.querySelector('.header--collapsed__form__input'),
+        searchParent = search.closest('.header--collapsed__form')
 
-        headerMenu.addEventListener('click',()=>{
-            navbarCollapsed.classList.add('--active')
-        })
-        navbarCollapsedClose.addEventListener('click',()=>{
-            navbarCollapsed.classList.remove('--active')
-        })
+    header.querySelector('.header__menu').addEventListener('click',()=>{
+        headerCollapsed.classList.add('--active')
+        document.documentElement.classList.add('overflow-hidden')
+    })
+    function headerClose() {
+        headerCollapsed.classList.remove('--active')
+        document.documentElement.classList.remove('overflow-hidden')
+        search.value = ''
+    }
+    header.querySelector('.header--collapsed__top__close').addEventListener('click',()=>{
+        headerClose()
+    })
+
+    search.addEventListener('input',(e)=>{
+        if(e.target.value.length > 0){
+            searchParent.classList.add('--active')
+        }else{
+            searchParent.classList.remove('--active')
+        }
+    })
+    header.querySelector('.header--collapsed__form__close').addEventListener('click',(e)=>{
+        searchParent.classList.remove('--active')
+        search.value = ''
+    })
+        // const headerMenu = header.querySelector('.header__menu'),
+        // navbarCollapsed = document.querySelector('.header--collapsed'),
+        // navbarCollapsedClose = document.querySelector('.header--collapsed__top__close')
+
+        // headerMenu.addEventListener('click',()=>{
+        //     navbarCollapsed.classList.add('--active')
+        // })
+        // navbarCollapsedClose.addEventListener('click',()=>{
+        //     navbarCollapsed.classList.remove('--active')
+        // })
     }
 
     let lastScrollTop = 0, lastHeaderPosition = 0;
     window.addEventListener('scroll', function() {
         //unsticky header
         let scrollHeaderTop = window.pageYOffset || document.documentElement.scrollTop,
-            limitHeader = document.querySelector('.navbar').offsetHeight + document.querySelector('.header').offsetHeight;
+            limitHeader = document.querySelector('.header').offsetHeight;
         if (scrollHeaderTop  > limitHeader){
             if (scrollHeaderTop  > lastHeaderPosition) {
                 document.querySelector('.header').classList.add('--unsticky')
@@ -246,9 +274,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.groupEnd(); 
 
         let readpageAuthor = document.querySelector('.readpage__author')
-        readpageAuthor.addEventListener('click', (e) => {
+        readpageAuthor?.addEventListener('click', (e) => {
             readpageAuthor.classList.toggle('--collapsed')
-
         })
     }
     const readpageReaction = document.querySelector('.readpage__share__reaction');
