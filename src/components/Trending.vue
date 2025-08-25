@@ -38,11 +38,11 @@
                         <div class="swiper text-black dark:text-white mask-x-from-95% mask-x-to-100%">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News1" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -56,11 +56,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News2" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -74,11 +74,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News3" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -92,11 +92,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News4" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -110,11 +110,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News1" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -128,11 +128,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News2" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -146,11 +146,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News3" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -164,11 +164,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News4" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -182,11 +182,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News1" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -200,11 +200,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News2" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -218,11 +218,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News3" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>
@@ -236,11 +236,11 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#" class="item">
+                                    <a href="#" class="item group">
                                         <figure class="item__figure">
                                             <img class="item__figure__img" :src="News4" alt="">
                                             <iframe class="item__video vidio-embed" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
-                                            <span class="item__time">
+                                            <span class="item__time bg-black/70 text-white">
                                                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
                                                 <span>05:30</span>
                                             </span>

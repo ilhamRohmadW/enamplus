@@ -1,1 +1,1 @@
-@reference "tailwindcss"{}@layer components{.section--topik{@apply py-4 mb-6{}}.section--topik .container{@apply max-w-screen-lg mx-auto px-4{}}.section--topik__title{@apply text-xl font-bold mb-5 flex items-center gap-2{}}}
+@reference "tailwindcss"{}@layer components{.section--topik{@apply py-4 mb-6{}}.section--topik__title{@apply text-xl font-bold mb-5 flex items-center gap-2{}}}

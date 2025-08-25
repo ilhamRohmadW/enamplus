@@ -9,7 +9,7 @@
     object-fit: contain;
   }
   .container {
-    @apply relative max-w-screen-lg! mx-auto px-4 {}
+    @apply relative max-w-screen-lg! mx-auto px-4 lg:max-w-[90%]! {}
   }
   .section {
     @apply relative py-6 mb-4 {}

@@ -2,9 +2,6 @@
   .segment {
     @apply mt-3 mb-6 {}
   }
-  .segment .container {
-    @apply max-w-screen-lg mx-auto px-4 {}
-  }
   .segment--inner {
     @apply p-px rounded-lg relative text-sm {}    @apply lg:mt-6 {}
   }

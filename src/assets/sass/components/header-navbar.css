@@ -5,9 +5,6 @@
   .header--navbar {
     @apply flex items-center justify-between py-4 gap-6 {}
   }
-  .header .container {
-    @apply mx-auto max-w-screen-lg px-4 relative {}
-  }
   .header.--unsticky {
     @apply -translate-y-15 {}    @apply lg:-translate-y-17 {}
   }

@@ -136,80 +136,111 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Isotope filter
-    setTimeout(() => {
-        const grid = document.querySelector('.video-tab-grid');
-        const iso = new Isotope(grid, {
-            itemSelector: '.video-card',
-            layoutMode: 'fitRows'
-        });
-        
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                const filterValue = this.getAttribute('data-filter');
-                iso.arrange({ filter: filterValue });
+    const grid = document.querySelector('.video-tab-grid');
+    if (grid) {
+        setTimeout(() => {
+            const iso = new Isotope(grid, {
+                itemSelector: '.video-card',
+                layoutMode: 'fitRows'
             });
-        });
-    }, 100);
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const filterValue = this.getAttribute('data-filter');
+                    iso.arrange({ filter: filterValue });
+                });
+            });
+        }, 100);
+    }
     
-
-
-    const storySwiper = new Swiper('.story__swiper', {
-        loop: true,
-        slidesPerView: "auto",
-        spaceBetween: 10,
-        mousewheel: true,
-        freeMode: true,
-        navigation: {
-            nextEl: '.story .swiper-button-next',
-            prevEl: '.story .swiper-button-prev',
-        },
-        breakpoints: {
-            1024: {
-                spaceBetween: 24,
-            },
-        },
-    });
-    
-    document.querySelectorAll('.section--video').forEach(container => {
-        const videoSwiper = new Swiper(container.querySelector('.section--video__swiper'), {
-            slidesPerView: 'auto',
-            mousewheel: true,
-        // freeMode: true,
-            // spaceBetween: 16,
-            navigation: {
-                nextEl: container.querySelector('.swiper-button-next'),
-                prevEl: container.querySelector('.swiper-button-prev'),
-            },
+    function hoverMouseSwiper(container,func) {
+        func.mousewheel.disable();
+        container.addEventListener('mouseenter', () => {
+            func.mousewheel.enable();
         });
-    });
+        container.addEventListener('mouseleave', () => {
+            func.mousewheel.disable();
+        });
+    }
 
-    document.querySelectorAll('.section--trending .swiper').forEach(el =>  {
-        const trendingSwiper = new Swiper(el, {
-            slidesPerView: 'auto',
-            mousewheel: true,
-            // spaceBetween: 16,
+    let storySwiper = document.querySelector('.story__swiper');
+    if(storySwiper){
+        const swiper = new Swiper(storySwiper, {
+            loop: true,
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            mousewheel: {
+                forceToAxis: true,
+                releaseOnEdges: true,
+                sensitivity: 1,
+            },
             freeMode: true,
-            pagination: {
-                el: el.querySelector('.swiper-pagination'),
-                clickable: true,
-            },
             navigation: {
-                nextEl: el.closest('.section--trending')?.querySelector('.swiper-button-next'),
-                prevEl: el.closest('.section--trending')?.querySelector('.swiper-button-prev'),
+                nextEl: storySwiper.closest('.story')?.querySelector('.swiper-button-next'),
+                prevEl: storySwiper.closest('.story')?.querySelector('.swiper-button-prev'),
             },
-            on: {
-                progress: function (trendingSwiper , progress) {
-                    const customRowTitle = el.closest('.section--trending')
-
-                    if (customRowTitle) {
-                        trendingSwiper.progress === 0 ? customRowTitle.classList.remove('bla')  : customRowTitle.classList.add('bla') ;
-                    }
+            breakpoints: {
+                1024: {
+                    spaceBetween: 24,
                 },
-            }
+            },
         });
-    });
+        hoverMouseSwiper(storySwiper, swiper)
+
+    }
+    let sectVideo = document.querySelectorAll('.section--video')
+    if (sectVideo) {
+        sectVideo.forEach(container => {
+            const swiper = new Swiper(container.querySelector('.section--video__swiper'), {
+                slidesPerView: 'auto',
+                mousewheel: {
+                    forceToAxis: true,
+                    releaseOnEdges: true,
+                    sensitivity: 1,
+                },
+                navigation: {
+                    nextEl: container.querySelector('.swiper-button-next'),
+                    prevEl: container.querySelector('.swiper-button-prev'),
+                },
+            });
+            hoverMouseSwiper(container, swiper)
+        });
+    }
+
+    let sectTrend = document.querySelectorAll('.section--trending .swiper')
+    if (sectTrend) {
+        sectTrend.forEach(el =>  {
+            const swiper = new Swiper(el, {
+                slidesPerView: 'auto',
+                mousewheel: {
+                    forceToAxis: true,
+                    releaseOnEdges: true,
+                    sensitivity: 1,
+                },
+                freeMode: true,
+                pagination: {
+                    el: el.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: el.closest('.section--trending')?.querySelector('.swiper-button-next'),
+                    prevEl: el.closest('.section--trending')?.querySelector('.swiper-button-prev'),
+                },
+                on: {
+                    progress: function (trendingSwiper , progress) {
+                        const customRowTitle = el.closest('.section--trending')
+
+                        if (customRowTitle) {
+                            trendingSwiper.progress === 0 ? customRowTitle.classList.remove('bla')  : customRowTitle.classList.add('bla') ;
+                        }
+                    },
+                }
+            });
+            hoverMouseSwiper(el, swiper)
+        });
+    }
 
     console.group('article share')
     var shareParent = document.querySelectorAll('.readpage__share'),
