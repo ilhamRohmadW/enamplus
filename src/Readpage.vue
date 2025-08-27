@@ -40,9 +40,11 @@
                                 <div class="readpage__author text-neutral-500 dark:text-white group">
                                     <div class="readpage__author__show">
                                         <span>Oleh</span>
-                                        <a href="#" class="readpage__author__name text-primary">Cintya</a>
-                                        <span>Diperbaharui 24 Mar 2025, 08:30 WIB</span>
-                                        <svg class="readpage__author__icon text-primary" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        <a href="#" class="readpage__author__name text-primary">Cintya Ayu Kirana</a>
+                                        <div class="readpage__author__update">
+                                            <span>Diperbaharui 24 Mar 2025, 08:30 WIB</span>
+                                            <svg class="readpage__author__icon text-primary" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </div>
                                     </div>
                                     <div class="readpage__author__hide">
                                         <span class="readpage__author__release">Diterbitkan </span>

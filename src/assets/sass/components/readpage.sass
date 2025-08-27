@@ -2,7 +2,7 @@
 @layer components
     .section
         &--readpage
-            @apply pt-0 overflow-x-hidden
+            @apply pt-0 overflow-x-hidden lg:overflow-x-visible
     .readpage
         &__video
             @apply -mx-4 aspect-video mb-3
@@ -18,26 +18,34 @@
         &__bottom
             @apply mb-8 mt-3
             @apply lg:rounded-lg lg:flex lg:justify-between lg:items-center lg:pl-4
+            // @apply lg:flex-nowrap
             &__link
                 @apply hidden lg:flex size-6 rounded-full mr-2 overflow-hidden
         &__desc
             @apply text-sm mb-5
         &__author
-            @apply text-xs max-h-4 flex-1 overflow-hidden transition-all mb-5 lg:mb-0 cursor-pointer
+            @apply text-xs flex-1 overflow-hidden mb-5 lg:mb-0 cursor-pointer
+            // @apply max-h-4
+            // @apply whitespace-nowrap
             &__show
-                @apply flex items-center gap-1
+                @apply flex items-center gap-x-1 flex-wrap
             &__name
                 @apply font-semibold
             &__icon
-                @apply transition-transform group-[.--collapsed]:rotate-180
+                @apply transition-transform group-[.--collapsed]:rotate-180 ml-1
+            &__update
+                @apply flex items-center
             &__release
                 @apply font-bold
-
+            &__hide
+                @apply max-h-0 transition-all
             &.--collapsed
-                @apply max-h-8
+                .readpage__author__hide
+                    @apply max-h-4
         &__share
             @apply flex items-center justify-between p-4 z-0 rounded-lg relative text-xs
-            @apply lg:gap-10
+            @apply lg:gap-6
+            @apply xl:gap-10
             &__button,
             &__comment
                 @apply flex items-center gap-2
@@ -45,7 +53,7 @@
                 svg,
                     @apply pointer-events-none
             &__dropdown
-                @apply absolute top-full right-0 pointer-events-none translate-y-0 transition-all duration-300 ease-in-out opacity-0 font-medium rounded-lg shadow-[0_10px_40px_10px_rgba(0,0,0,0.16)]
+                @apply absolute top-full right-0 pointer-events-none -translate-y-4 transition-all duration-300 ease-in-out opacity-0 font-medium rounded-lg shadow-[0_10px_40px_10px_rgba(0,0,0,0.16)]
                 &__content
                     @apply p-4
                 &__bottom
@@ -70,4 +78,4 @@
                 &__dislike
                     @apply flex items-center gap-1 text-sm transition cursor-pointer
             &.--collapsed .readpage__share__dropdown
-                @apply translate-y-4 opacity-100 pointer-events-auto
+                @apply translate-y-1 opacity-100 pointer-events-auto
