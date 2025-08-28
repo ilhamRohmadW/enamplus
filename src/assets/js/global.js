@@ -360,5 +360,120 @@ document.addEventListener('DOMContentLoaded', () => {
             likeCount.textContent = count;
         });
     }
+
+
+    console.group('vertical')
+    // vertical
+    let sections = document.querySelectorAll("[data-section]");
+    let indicators = document.querySelector("[data-indicator]");
+    const scrollRoot = document.querySelector('[data-scroller]')
+
+    let currentIndex = 0;
+    let prevYPosition = 0;
+
+    let options = {
+        root: scrollRoot,
+        rootMargin: "-12% 0px -88% 0px"
+    };
+
+    const setScrollDirection = () => {
+        if(scrollRoot){
+            
+            if (scrollRoot.scrollTop > prevYPosition) {
+                if(currentIndex % 5 === 0){
+                    indicators.scrollBy({ 
+                        top: indicators.clientHeight,
+                        behavior: 'smooth' 
+                    });
+                }
+            } else {
+                if((currentIndex + 1) % 5 === 0){
+                    indicators.scrollBy({ 
+                        top: -indicators.clientHeight,
+                        behavior: 'smooth' 
+                    });
+                }
+            }
+            prevYPosition = scrollRoot.scrollTop + (scrollRoot.clientHeight / 3)
+        }
+    }
+
+    const setIndicator = () => {
+        if(indicators){
+            indicators.innerHTML = '';
+            for (var i = 0; i < sections.length; i++) {
+                var button = document.createElement('span');
+                
+                button.classList.add('indicator-bullet', 'snap-always', 'shrink-0', 'size-2', 'bg-black/50');
+                if(i === currentIndex){
+                    button.classList.add('indicator-bullet-active')
+                }
+                
+                (function(i) {
+                    button.onclick = function() {
+                        sections[i].scrollIntoView();
+                    }
+                })(i);
+
+                indicators.appendChild(button);
+            }
+        }
+    }
+
+    var btnpageNext = document.querySelector('.btn--page-next');
+    var btnpagePrev = document.querySelector('.btn--page-prev');
+    if(btnpageNext){
+        btnpageNext.addEventListener("click", function(e){
+            
+            document.querySelector('[data-section].is-visible').nextElementSibling.scrollIntoView({block: 'start'});
+            e.preventDefault();
+        })
+    }
+    if(btnpagePrev){
+        btnpagePrev.addEventListener("click", function(e){
+            document.querySelector('[data-section].is-visible').previousElementSibling.scrollIntoView({block: 'end'});
+            e.preventDefault();
+        })
+    }
+    
+    window.io = new IntersectionObserver((entries) => {
+        
+        entries.forEach(entry => {
+            // const section = entry.target.dataset.section;
+            const sid = entry.target.dataset.sid;
+            // const sound = entry.target.dataset.sound;
+
+            //
+            // console.log('isIntersecting', entry.isIntersecting);
+            if (entry.isIntersecting) {
+                // document.body.setAttribute('data-sound', sound)
+                entry.target.classList.add("is-visible");
+                currentIndex = elementIndices[sid];
+
+                setIndicator();
+                setScrollDirection();
+            } else {
+                entry.target.classList.remove("is-visible");
+
+            }
+        });
+    }, options);
+
+    var elementIndices = {};
+    function initSection()
+    {
+        var sectionsIns = document.querySelectorAll('[data-section]:not([data-theme="ads"],[data-theme="insertion"],[data-page="0"])')
+        for (var i = 0; i < sectionsIns.length; i++) {
+            var sid = (Math.random() + 1).toString(36).substring(7);
+            sectionsIns[i].dataset.sid = sid;
+            elementIndices[sectionsIns[i].dataset.sid] = i;
+        }
+        for (var i = 0; i < sections.length; i++) {
+            if(window.io && window.io.unobserve) window.io.unobserve(sections[i]);
+            if(window.io && window.io.observe) window.io.observe(sections[i]);
+        }
+    }
+    initSection();
+
 })
 

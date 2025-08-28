@@ -16,6 +16,7 @@ export default defineConfig({
         index: './index.html',
         readpage: './readpage.html',
         indexSpecial: './indexSpecial.html',
+        vertical: './vertical.html',
       },
       output: {
         entryFileNames: 'assets/js/[name].js', // Specify the desired output file name for the main JS file
