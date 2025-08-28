@@ -90,16 +90,16 @@
     @apply h-10 w-10 -mr-2 flex items-center justify-center cursor-pointer {}
   }
   .header--collapsed__menu {
-    @apply flex flex-col overflow-y-auto h-full px-4 pb-4 whitespace-nowrap {}
+    @apply flex flex-col overflow-y-auto h-full pb-4 whitespace-nowrap {}
   }
   .header--collapsed__menu::-webkit-scrollbar {
     @apply hidden {}
   }
   .header--collapsed__menu__break {
-    @apply border-b -mx-4 {}
+    @apply border-b {}
   }
   .header--collapsed__menu__link {
-    @apply flex items-center gap-2 py-3 transition-colors {}
+    @apply flex items-center gap-2 py-3 px-4 transition-colors {}
   }
   .header--collapsed__menu__item.--active .header--collapsed__menu__link {
     @apply border-primary {}
