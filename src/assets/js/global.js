@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     setTheme(checkMode)
-
+    
     document.querySelectorAll('.switch-theme').forEach((item)=>{
         item.addEventListener('click',(e)=>{
             let value = e.target.dataset.value;
@@ -33,50 +33,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header')
     if (header) {
         const headerCollapsed = document.querySelector('.header--collapsed')
-    let search = header.querySelector('.header--collapsed__form__input'),
+        let search = header.querySelector('.header--collapsed__form__input'),
         searchParent = search.closest('.header--collapsed__form')
-
-    header.querySelector('.header__menu').addEventListener('click',()=>{
-        headerCollapsed.classList.add('--active')
-        document.documentElement.classList.add('overflow-hidden')
-    })
-    function headerClose() {
-        headerCollapsed.classList.remove('--active')
-        document.documentElement.classList.remove('overflow-hidden')
-        search.value = ''
-    }
-    header.querySelector('.header--collapsed__top__close').addEventListener('click',()=>{
-        headerClose()
-    })
-
-    search.addEventListener('input',(e)=>{
-        if(e.target.value.length > 0){
-            searchParent.classList.add('--active')
-        }else{
-            searchParent.classList.remove('--active')
+        
+        header.querySelector('.header__menu').addEventListener('click',()=>{
+            headerCollapsed.classList.add('--active')
+            document.documentElement.classList.add('overflow-hidden')
+        })
+        function headerClose() {
+            headerCollapsed.classList.remove('--active')
+            document.documentElement.classList.remove('overflow-hidden')
+            search.value = ''
         }
-    })
-    header.querySelector('.header--collapsed__form__close').addEventListener('click',(e)=>{
-        searchParent.classList.remove('--active')
-        search.value = ''
-    })
+        header.querySelector('.header--collapsed__top__close').addEventListener('click',()=>{
+            headerClose()
+        })
+        
+        search.addEventListener('input',(e)=>{
+            if(e.target.value.length > 0){
+                searchParent.classList.add('--active')
+            }else{
+                searchParent.classList.remove('--active')
+            }
+        })
+        header.querySelector('.header--collapsed__form__close').addEventListener('click',(e)=>{
+            searchParent.classList.remove('--active')
+            search.value = ''
+        })
         // const headerMenu = header.querySelector('.header__menu'),
         // navbarCollapsed = document.querySelector('.header--collapsed'),
         // navbarCollapsedClose = document.querySelector('.header--collapsed__top__close')
-
+        
         // headerMenu.addEventListener('click',()=>{
-        //     navbarCollapsed.classList.add('--active')
+            //     navbarCollapsed.classList.add('--active')
         // })
         // navbarCollapsedClose.addEventListener('click',()=>{
-        //     navbarCollapsed.classList.remove('--active')
+            //     navbarCollapsed.classList.remove('--active')
         // })
     }
-
+    
     let lastScrollTop = 0, lastHeaderPosition = 0;
     window.addEventListener('scroll', function() {
         //unsticky header
         let scrollHeaderTop = window.pageYOffset || document.documentElement.scrollTop,
-            limitHeader = document.querySelector('.header').offsetHeight;
+        limitHeader = document.querySelector('.header').offsetHeight;
         if (scrollHeaderTop  > limitHeader){
             if (scrollHeaderTop  > lastHeaderPosition) {
                 document.querySelector('.header').classList.add('--unsticky')
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         lastHeaderPosition = scrollHeaderTop;
     })
-
+    
     const mediaQuery = window.matchMedia('(min-width: 1024px)')
     let floating = '<iframe class="vidio-embed bg-neutral-700" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>'
     let floatingParent = document.querySelector('.story__swiper')
@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.addEventListener("mouseenter", () => {
                     newElement = document.createElement('div');
                     let itemRect = item.getBoundingClientRect()
-
+                    
                     newElement.classList.add('story__floating')
                     newElement.innerHTML = floating;
                     floatingParent.after(newElement)
-
+                    
                     newElement.querySelector('iframe').src = item.dataset.src
                     newElement.style.left = itemRect.left.toFixed() - parentRect.left.toFixed() + (itemRect.width.toFixed() / 2) + 'px'
                     setTimeout(() => {
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => {
                         newElement.remove()
                     }, 500);
-
+                    
                     // floating.classList.remove('--active')
                     // floating.querySelector('iframe').removeAttribute("src");
                 });
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-
+    
     // Isotope filter
     const grid = document.querySelector('.video-tab-grid');
     if (grid) {
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             func.mousewheel.disable();
         });
     }
-
+    
     let storySwiper = document.querySelector('.story__swiper');
     if(storySwiper){
         const swiper = new Swiper(storySwiper, {
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
         hoverMouseSwiper(storySwiper, swiper)
-
+        
     }
     let sectVideo = document.querySelectorAll('.section--video')
     if (sectVideo) {
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hoverMouseSwiper(container, swiper)
         });
     }
-
+    
     let sectTrend = document.querySelectorAll('.section--trending .swiper')
     if (sectTrend) {
         sectTrend.forEach(el =>  {
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 on: {
                     progress: function (trendingSwiper , progress) {
                         const customRowTitle = el.closest('.section--trending')
-
+                        
                         if (customRowTitle) {
                             trendingSwiper.progress === 0 ? customRowTitle.classList.remove('bla')  : customRowTitle.classList.add('bla') ;
                         }
@@ -241,26 +241,26 @@ document.addEventListener('DOMContentLoaded', () => {
             hoverMouseSwiper(el, swiper)
         });
     }
-
+    
     console.group('article share')
     var shareParent = document.querySelectorAll('.readpage__share'),
-        shareUrl = window.location.href,
-        shareTitle = document.title
-        
+    shareUrl = window.location.href,
+    shareTitle = document.title
+    
     if (shareParent) {
-
+        
         shareParent.forEach(item => {   
             var shareButton = item.querySelector('.readpage__share__button'),
-                shareCopy = item.querySelector('.readpage__share__copy'),
-                shareCancel = item.querySelector('.readpage__share__cancel')
+            shareCopy = item.querySelector('.readpage__share__copy'),
+            shareCancel = item.querySelector('.readpage__share__cancel')
             // expand dropdown
             shareButton.addEventListener('click', async (e) => {
                 if (navigator.share) {
                     console.log('native');
                     try {
                         await navigator.share({
-                        title: shareTitle,
-                        url: shareUrl,
+                            title: shareTitle,
+                            url: shareUrl,
                         });
                         console.log('Shared successfully');
                     } catch (err) {
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.querySelector('.readpage__share__social__button--whatsapp').href = "https://wa.me/?text="+ encodeURIComponent(shareTitle + " " + shareUrl)
             item.querySelector('.readpage__share__social__button--telegram').href = "https://t.me/share/url?url=" + encodeURIComponent(shareUrl) + "&text="+ encodeURIComponent(shareTitle)
             item.querySelector('.readpage__share__social__button--linkedin').href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl)
-
+            
             // copy link
             shareCopy.addEventListener('click', (e) => {
                 console.log('copy');
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         console.groupEnd(); 
-
+        
         let readpageAuthor = document.querySelector('.readpage__author')
         readpageAuthor?.addEventListener('click', (e) => {
             readpageAuthor.classList.toggle('--collapsed')
@@ -314,11 +314,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const likeBtn = readpageReaction.querySelector('.readpage__share__reaction__like');
         const dislikeBtn = readpageReaction.querySelector('.readpage__share__reaction__dislike');
         const likeCount = likeBtn.querySelector('.readpage__share__reaction__count');
-
+        
         let liked = false;
         let disliked = false;
         let count = parseInt(likeCount.textContent, 10);
-
+        
         likeBtn.addEventListener('click', () => {
             if (liked) {
                 // Remove like
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 liked = true;
                 count++;
                 likeBtn.classList.add('--active');
-
+                
                 // If dislike was active, remove it
                 if (disliked) {
                     disliked = false;
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             likeCount.textContent = count;
         });
-
+        
         dislikeBtn.addEventListener('click', () => {
             if (disliked) {
                 // Remove dislike
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Add dislike
                 disliked = true;
                 dislikeBtn.classList.add('--active');
-
+                
                 // If liked, remove like and decrement
                 if (liked) {
                     liked = false;
@@ -360,22 +360,22 @@ document.addEventListener('DOMContentLoaded', () => {
             likeCount.textContent = count;
         });
     }
-
-
+    
+    
     console.group('vertical')
     // vertical
     let sections = document.querySelectorAll("[data-section]");
     let indicators = document.querySelector("[data-indicator]");
     const scrollRoot = document.querySelector('[data-scroller]')
-
+    
     let currentIndex = 0;
     let prevYPosition = 0;
-
+    
     let options = {
         root: scrollRoot,
         rootMargin: "-12% 0px -88% 0px"
     };
-
+    
     const setScrollDirection = () => {
         if(scrollRoot){
             
@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prevYPosition = scrollRoot.scrollTop + (scrollRoot.clientHeight / 3)
         }
     }
-
+    
     const setIndicator = () => {
         if(indicators){
             indicators.innerHTML = '';
@@ -414,24 +414,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         sections[i].scrollIntoView();
                     }
                 })(i);
-
+                
                 indicators.appendChild(button);
             }
         }
     }
-
+    
     var btnpageNext = document.querySelector('.btn--page-next');
     var btnpagePrev = document.querySelector('.btn--page-prev');
     if(btnpageNext){
         btnpageNext.addEventListener("click", function(e){
             
-            document.querySelector('[data-section].is-visible').nextElementSibling.scrollIntoView({block: 'start'});
+            document.querySelector('[data-section].active').nextElementSibling.scrollIntoView({block: 'start'});
             e.preventDefault();
         })
     }
     if(btnpagePrev){
         btnpagePrev.addEventListener("click", function(e){
-            document.querySelector('[data-section].is-visible').previousElementSibling.scrollIntoView({block: 'end'});
+            document.querySelector('[data-section].active').previousElementSibling.scrollIntoView({block: 'end'});
             e.preventDefault();
         })
     }
@@ -442,30 +442,30 @@ document.addEventListener('DOMContentLoaded', () => {
             // const section = entry.target.dataset.section;
             const sid = entry.target.dataset.sid;
             // const sound = entry.target.dataset.sound;
-
+            
             //
             // console.log('isIntersecting', entry.isIntersecting);
             if (entry.isIntersecting) {
                 // document.body.setAttribute('data-sound', sound)
-                entry.target.classList.add("is-visible");
+                entry.target.classList.add("active");
                 currentIndex = elementIndices[sid];
-
+                
                 setIndicator();
                 setScrollDirection();
-
+                
                 // let entryVideo = entry.target.querySelector('iframe')
                 // entryVideo.src = entryVideo.dataset.src
-
+                
                 
             } else {
-                entry.target.classList.remove("is-visible");
-
+                entry.target.classList.remove("active");
+                
                 // let entryVideo = entry.target.querySelector('iframe')
                 // entryVideo.src = ''
             }
         });
     }, options);
-
+    
     var elementIndices = {};
     function initSection()
     {
@@ -481,8 +481,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     initSection();
-
-
+    
+    
     let moreless = document.querySelectorAll('.moreLess');
     if (moreless) {
         moreless?.forEach(item => {
@@ -495,8 +495,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-
+    
+    
     let popupTrigger = document.querySelectorAll('[data-popup]')
     if (popupTrigger){
         popupTrigger?.forEach(item => {
@@ -509,12 +509,110 @@ document.addEventListener('DOMContentLoaded', () => {
         let popupClose = document.querySelectorAll('[data-popup-close]')
         popupClose?.forEach(item => {
             item.addEventListener("click", (e) => {
-            let popup = document.querySelector('[data-popup-open].--open')
-            popup.classList.remove('--open')
-            e.preventDefault()
+                let popup = document.querySelector('[data-popup-open].--open')
+                popup.classList.remove('--open')
+                e.preventDefault()
             })
         })
     }
+    
+    
+    const players = document.querySelectorAll('.player');
+    const isMobile = window.innerWidth <= 768;
+    
+    // Scroll observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const player = entry.target;
+            const iframe = player.querySelector('iframe');
+            
+            if (entry.isIntersecting) {
+                players.forEach(p => {
+                    const pIframe = p.querySelector('iframe');
+                    
+                    if (p === player) {
+                        if (!pIframe.src) {
+                            let currentSrc = pIframe.dataset.src;
+                            
+                            if (isMobile) {
+                                // if (!currentSrc.includes("hide_controller=true")) {
+                                //   currentSrc += "&hide_controller=true";
+                                // }
+                                pIframe.setAttribute("data-src", currentSrc);
+                                pIframe.src = currentSrc;
+                                
+                            } else {
+                                pIframe.src = currentSrc;
+                            }
+                        }
+                        
+                        p.classList.add('active');
+                    } else {
+                        p.classList.remove('active');
+                        pIframe.removeAttribute('src');
+                    }
+                });
+            }
+        });
+    }, { threshold: .5 });
+    
+    players.forEach(player => {
+        observer.observe(player);
+        
+        const toggleButton = player.querySelector('.truncate-toggle');
+        const paragraph = player.querySelector('.truncate-paragraph');
+        
+        if (toggleButton && paragraph) {
+            toggleButton.addEventListener('click', function () {
+                if (paragraph.classList.contains('line-clamp-2')) {
+                    paragraph.classList.remove('line-clamp-2');
+                    this.textContent = 'Sembunyikan';
+                } else {
+                    paragraph.classList.add('line-clamp-2');
+                    this.textContent = 'Selengkapnya';
+                }
+            });
+        }
+        
+        
+        
+    });
+    
+    window.addEventListener('message', (event) => {
+        const data = event.data;
+        if (!data?.event) return;
+        
+        players.forEach(player => {
+            const iframe = player.querySelector('iframe');
+            if (event.source !== iframe?.contentWindow) return;
+            
+            switch (data.event) {
+                case 'vidio.playback.ready':
+                console.log('Video Mulai');
+                if (isMobile) {
+                    // iframe.contentWindow?.postMessage('vidio.playback.ui.hide_fullscreen', '*');
+                    // iframe.contentWindow?.postMessage('vidio.playback.ui.hide_vidio_logo', '*');
+                    // iframe.contentWindow?.postMessage('vidio.playback.ui.hide_topbar', '*');
+                    
+                    iframe.contentWindow?.postMessage('vidio.playback.ui.show_play_components_only', '*');
+                    
+                    
+                } else {
+                    iframe.contentWindow?.postMessage('vidio.playback.ui.show_components', '*');
+                }
+                
+                break;
+                
+                case 'vidio.playback.playing':
+                console.log('Video Playing');
+                break;
+                
+                case 'vidio.playback.vod.ended':
+                console.log('Video Selesai');
+                break;
+            }
+        });
+    });
     
     
 })

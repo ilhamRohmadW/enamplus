@@ -9,7 +9,7 @@ import Story5 from './assets/image/story-5.png';
 </script>
 
 <template>
-  <Header6/>
+    <Header6/>
     <main class="main flex flex-col mb-6 lg:mb-10">
         <section class="section section--story">
             <div class="container">
@@ -141,7 +141,6 @@ import Story5 from './assets/image/story-5.png';
                             <p>komentar</p>
                         </div>
                     </div>
-
                 </div>
                 <div data-section="video" class="shrink-0 transition bg-black/10 h-full snap-always snap-start">
                     <iframe class="vidio-embed w-full h-full"data-video-type="vertical" data-src="https://www.vidio.com/embed/8908249-kondisi-terkini-sekitar-kwitang-ada-bangkai-mobil-terbakar-aparat-tni-diterjunkan" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
@@ -168,6 +167,6 @@ import Story5 from './assets/image/story-5.png';
     <Footer6/>
 </template>
 <style>
-    @import './assets/sass/components/vertical.css';
+@import './assets/sass/components/vertical.css';
 </style>
 
