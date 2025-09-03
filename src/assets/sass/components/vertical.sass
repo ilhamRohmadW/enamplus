@@ -1,7 +1,37 @@
 @reference "tailwindcss"
 @layer components
-    .indicator
-        &-bullet
-            @apply rounded-full
-            &-active
-                @apply bg-black!
+    .sect
+        &-detail
+            &-desc
+                max-height:calc(100% - calc(var(--spacing) * 12) - calc(var(--spacing) * 3))
+    // .vertical
+    //     &.--open
+    //         @apply opacity-100 pointer-events-auto
+    // .indicator
+    //     &-bullet
+    //         @apply rounded-full
+    //         &-active
+    //             @apply bg-black!
+    [data-section]
+        iframe
+            @apply pointer-events-none
+    @mixin hidescrollbar
+        -ms-overflow-style: none
+        scrollbar-width: none
+        &::-webkit-scrollbar
+            display: none
+            
+    .overflow-y-auto
+        @include hidescrollbar
+    .moreLess
+        &-text
+            @apply line-clamp-2 *:hidden *:first:block
+        &.--open
+            @apply flex-1 h-0
+            .moreLess-text
+                @apply line-clamp-none overflow-y-auto *:block
+                @include hidescrollbar
+    .popup
+        &.--open
+            @apply opacity-100! translate-y-0! 
+    

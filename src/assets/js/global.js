@@ -122,9 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
             
-        }else{
+        }else if(item.querySelector("iframe")){
             const iframe = item.querySelector("iframe");
-            const dataSrc = iframe.getAttribute("data-src");
+            const dataSrc = iframe?.getAttribute("data-src");
             item.addEventListener("mouseenter", () => {
                 iframe.src = dataSrc
             });
@@ -452,9 +452,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 setIndicator();
                 setScrollDirection();
+
+                // let entryVideo = entry.target.querySelector('iframe')
+                // entryVideo.src = entryVideo.dataset.src
+
+                
             } else {
                 entry.target.classList.remove("is-visible");
 
+                // let entryVideo = entry.target.querySelector('iframe')
+                // entryVideo.src = ''
             }
         });
     }, options);
@@ -475,5 +482,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     initSection();
 
+
+    let moreless = document.querySelectorAll('.moreLess');
+    if (moreless) {
+        moreless?.forEach(item => {
+            const btn = item.querySelector('.moreLess-trigger');
+            btn.addEventListener('click', () => {
+                item.classList.toggle('--open');
+                btn.textContent = item.classList.contains('--open')
+                ? 'Sembunyikan'
+                : 'Selengkapnya';
+            });
+        });
+    }
+
+
+    let popupTrigger = document.querySelectorAll('[data-popup]')
+    if (popupTrigger){
+        popupTrigger?.forEach(item => {
+            item.addEventListener("click", (e) => {
+                let popup = document.querySelector('[data-popup-open="'+item.dataset.popup+'"]')
+                popup.classList.add('--open')
+                e.preventDefault()
+            })
+        })
+        let popupClose = document.querySelectorAll('[data-popup-close]')
+        popupClose?.forEach(item => {
+            item.addEventListener("click", (e) => {
+            let popup = document.querySelector('[data-popup-open].--open')
+            popup.classList.remove('--open')
+            e.preventDefault()
+            })
+        })
+    }
+    
+    
 })
 

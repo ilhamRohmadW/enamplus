@@ -90,7 +90,7 @@
     @apply h-10 w-10 -mr-2 flex items-center justify-center cursor-pointer {}
   }
   .header--collapsed__menu {
-    @apply flex flex-col overflow-y-auto h-full pb-4 whitespace-nowrap {}
+    @apply flex flex-col overflow-y-auto h-full pb-4 whitespace-nowrap text-sm {}
   }
   .header--collapsed__menu::-webkit-scrollbar {
     @apply hidden {}
