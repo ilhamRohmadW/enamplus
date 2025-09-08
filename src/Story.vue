@@ -11,113 +11,245 @@ import Story5 from './assets/image/story-5.png';
 <template>
     <Header6/>
     <main class="main flex flex-col mb-6 lg:mb-10">
-        <section class="section section--story">
+        <section class="section section--story dark:text-white">
             <div class="container">
-                <div class="story grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-                    <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
-                        <figure class="item__figure">
-                            <img class="item__figure__img" :src="Story2" alt="">
-                            <span class="item__time bg-black/70 text-white">
-                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
-                                <span>05:30</span>
-                            </span>
-                        </figure>
-                        <span class="item__title">VIDEO : Inovasi “Gila” Dari GITEX 2025</span>
-                        <div class="item__detail text-neutral-500">
-                            <span class="item__tag">LIputan6 Update</span>
-                        </div>
-                    </a>
-                    <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
-                        <figure class="item__figure">
-                            <img class="item__figure__img" :src="Story3" alt="">
-                            <span class="item__time bg-black/70 text-white">
-                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
-                                <span>05:30</span>
-                            </span>
-                        </figure>
-                        <span class="item__title">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</span>
-                        <div class="item__detail text-neutral-500">
-                            <span class="item__tag">Zeneration</span>
-                        </div>
-                    </a>
-                    <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
-                        <figure class="item__figure">
-                            <img class="item__figure__img" :src="Story4" alt="">
-                            <span class="item__time bg-black/70 text-white">
-                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
-                                <span>05:30</span>
-                            </span>
-                        </figure>
-                        <span class="item__title">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</span>
-                        <div class="item__detail text-neutral-500">
-                            <span class="item__tag">LIputan6 Update</span>
-                        </div>
-                    </a>
-                    <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
-                        <figure class="item__figure">
-                            <img class="item__figure__img" :src="Story5" alt="">
-                            <span class="item__time bg-black/70 text-white">
-                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
-                                <span>05:30</span>
-                            </span>
-                        </figure>
-                        <span class="item__title">VIDEO Liputan6 Update: Truk Muatan Dilarang Inflasi Datang?</span>
-                        <div class="item__detail text-neutral-500">
-                            <span class="item__tag">LIputan6 Update</span>
-                        </div>
-                    </a>
-                    <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
-                        <figure class="item__figure">
-                            <img class="item__figure__img" :src="Story1" alt="">
-                            <span class="item__time bg-black/70 text-white">
-                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
-                                <span>05:30</span>
-                            </span>
-                        </figure>
-                        <span class="item__title">VIDEO : Inovasi “Gila” Dari GITEX 2025</span>
-                        <div class="item__detail text-neutral-500">
-                            <span class="item__tag">LIputan6 Update</span>
-                        </div>
-                    </a>
-                    <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
-                        <figure class="item__figure">
-                            <img class="item__figure__img" :src="Story2" alt="">
-                            <span class="item__time bg-black/70 text-white">
-                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
-                                <span>05:30</span>
-                            </span>
-                        </figure>
-                        <span class="item__title">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</span>
-                        <div class="item__detail text-neutral-500">
-                            <span class="item__tag">Zeneration</span>
-                        </div>
-                    </a>
-                    <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
-                        <figure class="item__figure">
-                            <img class="item__figure__img" :src="Story3" alt="">
-                            <span class="item__time bg-black/70 text-white">
-                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
-                                <span>05:30</span>
-                            </span>
-                        </figure>
-                        <span class="item__title">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</span>
-                        <div class="item__detail text-neutral-500">
-                            <span class="item__tag">LIputan6 Update</span>
-                        </div>
-                    </a>
-                    <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
-                        <figure class="item__figure">
-                            <img class="item__figure__img" :src="Story4" alt="">
-                            <span class="item__time bg-black/70 text-white">
-                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
-                                <span>05:30</span>
-                            </span>
-                        </figure>
-                        <span class="item__title">VIDEO Liputan6 Update: Truk Muatan Dilarang Inflasi Datang?</span>
-                        <div class="item__detail text-neutral-500">
-                            <span class="item__tag">LIputan6 Update</span>
-                        </div>
-                    </a>
+                <div class="section__title">
+                    <span class="section__title__text">
+                        STORY
+                    </span>
+                    <div class="tab-filter *:border-gray-200 *:hover:bg-[#FFF0E6]">
+                        <button class="tab-btn  active" data-filter="*">Semua</button>
+                        <button class="tab-btn" data-filter=".terkini">Terkini</button>
+                        <button class="tab-btn" data-filter=".terpopuler">Terpopuler</button>
+                    </div>
+                </div>
+                <div class="tab-grid *:*:dark:hover:shadow-white/20">
+                <!-- <div class="story grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"> -->
+                    <div class="card terkini">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story2" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO : Inovasi “Gila” Dari GITEX 2025</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terpopuler">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story3" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">Zeneration</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terkini">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story4" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terpopuler">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story5" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO Liputan6 Update: Truk Muatan Dilarang Inflasi Datang?</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terkini">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story1" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO : Inovasi “Gila” Dari GITEX 2025</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terpopuler">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story2" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">Zeneration</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terkini">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story3" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terpopuler">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story4" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO Liputan6 Update: Truk Muatan Dilarang Inflasi Datang?</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terkini">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story2" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO : Inovasi “Gila” Dari GITEX 2025</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terpopuler">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story3" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">Zeneration</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terkini">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story4" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terpopuler">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story5" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO Liputan6 Update: Truk Muatan Dilarang Inflasi Datang?</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terkini">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story2" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO : Inovasi “Gila” Dari GITEX 2025</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terpopuler">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story3" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">Zeneration</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card terkini">
+                        <a href="./vertical.html" class="item group" data-src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=false">
+                            <figure class="item__figure">
+                                <img class="item__figure__img" :src="Story4" alt="">
+                                <span class="item__time bg-black/70 text-white">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.93777 5.13033L1.52473 0.747786C0.922419 0.391876 0 0.737256 0 1.61756V10.3805C0 11.1703 0.857133 11.6462 1.52473 11.2503L8.93777 6.86986C9.59905 6.48026 9.60116 5.51993 8.93777 5.13033Z" fill="currentColor"/></svg>
+                                    <span>05:30</span>
+                                </span>
+                            </figure>
+                            <span class="item__title">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</span>
+                            <div class="item__detail text-neutral-500 dark:text-white">
+                                <span class="item__tag">LIputan6 Update</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

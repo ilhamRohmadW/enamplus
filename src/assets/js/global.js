@@ -136,11 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Isotope filter
-    const grid = document.querySelector('.video-tab-grid');
+    const grid = document.querySelector('.tab-grid');
     if (grid) {
         setTimeout(() => {
             const iso = new Isotope(grid, {
-                itemSelector: '.video-card',
+                itemSelector: '.card',
                 layoutMode: 'fitRows'
             });
             
@@ -436,17 +436,18 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
     
-    window.io = new IntersectionObserver((entries) => {
+    const players = document.querySelectorAll('.player');
+    const isMobile = window.innerWidth <= 768;
+
+    const observer = new IntersectionObserver((entries) => {
+    // window.io = new IntersectionObserver((entries) => {
         
         entries.forEach(entry => {
-            // const section = entry.target.dataset.section;
+            const player = entry.target;
             const sid = entry.target.dataset.sid;
-            // const sound = entry.target.dataset.sound;
             
-            //
             // console.log('isIntersecting', entry.isIntersecting);
             if (entry.isIntersecting) {
-                // document.body.setAttribute('data-sound', sound)
                 entry.target.classList.add("active");
                 currentIndex = elementIndices[sid];
                 
@@ -455,6 +456,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // let entryVideo = entry.target.querySelector('iframe')
                 // entryVideo.src = entryVideo.dataset.src
+
+                var sectionLength = document.querySelectorAll('.section[data-sid]')?.length;
+                if(btnpagePrev){
+                    if(currentIndex == 0 || document.querySelector('[data-section=mobile-billboard].is-visible')?.getBoundingClientRect().top + scrollRoot.scrollTop == 0){
+                        btnpagePrev.classList.add('disabled')
+                    }else{
+                        btnpagePrev.classList.remove('disabled')
+                        btnpageNext.classList.remove('disabled')
+                        if(currentIndex + 1 == sectionLength){
+                            btnpageNext.classList.add('disabled')
+                        }
+                    }
+                }
+
+                players.forEach(p => {
+                    const pIframe = p.querySelector('iframe');
+                    
+                    if (p === player) {
+                        if (!pIframe.src) {
+                            let currentSrc = pIframe.dataset.src;
+                            
+                            if (isMobile) {
+                                // if (!currentSrc.includes("hide_controller=true")) {
+                                //   currentSrc += "&hide_controller=true";
+                                // }
+                                pIframe.setAttribute("data-src", currentSrc);
+                                pIframe.src = currentSrc;
+                                
+                            } else {
+                                pIframe.src = currentSrc;
+                            }
+                        }
+                        
+                        p.classList.add('active');
+                    } else {
+                        p.classList.remove('active');
+                        pIframe.removeAttribute('src');
+                    }
+                });
                 
                 
             } else {
@@ -482,80 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     initSection();
     
-    
-    let moreless = document.querySelectorAll('.moreLess');
-    if (moreless) {
-        moreless?.forEach(item => {
-            const btn = item.querySelector('.moreLess-trigger');
-            btn.addEventListener('click', () => {
-                item.classList.toggle('--open');
-                btn.textContent = item.classList.contains('--open')
-                ? 'Sembunyikan'
-                : 'Selengkapnya';
-            });
-        });
-    }
-    
-    
-    let popupTrigger = document.querySelectorAll('[data-popup]')
-    if (popupTrigger){
-        popupTrigger?.forEach(item => {
-            item.addEventListener("click", (e) => {
-                let popup = document.querySelector('[data-popup-open="'+item.dataset.popup+'"]')
-                popup.classList.add('--open')
-                e.preventDefault()
-            })
-        })
-        let popupClose = document.querySelectorAll('[data-popup-close]')
-        popupClose?.forEach(item => {
-            item.addEventListener("click", (e) => {
-                let popup = document.querySelector('[data-popup-open].--open')
-                popup.classList.remove('--open')
-                e.preventDefault()
-            })
-        })
-    }
-    
-    
-    const players = document.querySelectorAll('.player');
-    const isMobile = window.innerWidth <= 768;
-    
-    // Scroll observer
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const player = entry.target;
-            const iframe = player.querySelector('iframe');
-            
-            if (entry.isIntersecting) {
-                players.forEach(p => {
-                    const pIframe = p.querySelector('iframe');
-                    
-                    if (p === player) {
-                        if (!pIframe.src) {
-                            let currentSrc = pIframe.dataset.src;
-                            
-                            if (isMobile) {
-                                // if (!currentSrc.includes("hide_controller=true")) {
-                                //   currentSrc += "&hide_controller=true";
-                                // }
-                                pIframe.setAttribute("data-src", currentSrc);
-                                pIframe.src = currentSrc;
-                                
-                            } else {
-                                pIframe.src = currentSrc;
-                            }
-                        }
-                        
-                        p.classList.add('active');
-                    } else {
-                        p.classList.remove('active');
-                        pIframe.removeAttribute('src');
-                    }
-                });
-            }
-        });
-    }, { threshold: .5 });
-    
+
     players.forEach(player => {
         observer.observe(player);
         
@@ -566,18 +533,89 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleButton.addEventListener('click', function () {
                 if (paragraph.classList.contains('line-clamp-2')) {
                     paragraph.classList.remove('line-clamp-2');
+                    paragraph.classList.add('overflow-y-auto');
+                    
                     this.textContent = 'Sembunyikan';
                 } else {
                     paragraph.classList.add('line-clamp-2');
+                    paragraph.classList.remove('overflow-y-auto');
                     this.textContent = 'Selengkapnya';
                 }
             });
         }
         
         
+        const share = player.querySelectorAll('.share')
+        if(share){
+            share.forEach(item => {   
+                const shareBtn = item.querySelector('.share-btn')
+                const shareCopy = item.querySelector('.share__copy')
+                const shareCancel = item.querySelector('.share__cancel')
+                let shareTitle,
+                shareText,
+                shareUrl
+                
+                
+                shareBtn.addEventListener('click', async() => {
+                    
+                    shareTitle = shareBtn.closest('.player').querySelector('.title')?.textContent || '';
+                    shareText = shareBtn.closest('.player').querySelector('.truncate-paragraph')?.textContent || '';
+                    shareUrl = window.location.href
+                    
+                    console.log(shareTitle,shareText,shareUrl);
+                    if (navigator.share && isMobile) {
+                        try {
+                            await navigator.share({
+                                title: shareTitle,
+                                text: shareText,
+                                url: shareUrl // Share the current page URL
+                            });
+                            console.log('Content shared successfully!');
+                        } catch (error) {
+                            console.log(`Error sharing: ${error.message}`);
+                        }
+                    } else {
+                        console.log("Web Share API is not supported in your browser.");
+                        item.classList.add('--collapsed')
+                        // social media share
+                        item.querySelector('.share__social__button--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(shareUrl) +"%2F&amp;src=sdkpreparse"
+                        item.querySelector('.share__social__button--x').href = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(shareUrl) + "&text=" + encodeURIComponent(shareTitle)
+                        item.querySelector('.share__social__button--whatsapp').href = "https://wa.me/?text="+ encodeURIComponent(shareTitle + " " + shareUrl)
+                        item.querySelector('.share__social__button--telegram').href = "https://t.me/share/url?url=" + encodeURIComponent(shareUrl) + "&text="+ encodeURIComponent(shareTitle)
+                        item.querySelector('.share__social__button--linkedin').href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl)
+                    }
+                });
+                
+                // copy link
+                shareCopy.addEventListener('click', (e) => {
+                    console.log('copy');
+                    navigator.clipboard.writeText(shareUrl);
+                    shareCopy.querySelector('span').textContent = 'Link Copied!';
+                    setTimeout(() => {
+                        shareCopy.querySelector('span').textContent = 'Copy Link';
+                    }, 2000);
+                    e.preventDefault()
+                });
+                // click close
+                shareCancel.addEventListener('click', (e) => {
+                    item.classList.remove('--collapsed')
+                    e.preventDefault()
+                })
+                // click outside
+                document.addEventListener('click', (e) => {
+                    if (!item.contains(e.target)) {
+                        item.classList.remove('--collapsed')
+                    }
+                });
+            });
+            console.groupEnd(); 
+            
+        }
+        
+        
         
     });
-    
+
     window.addEventListener('message', (event) => {
         const data = event.data;
         if (!data?.event) return;
@@ -590,13 +628,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'vidio.playback.ready':
                 console.log('Video Mulai');
                 if (isMobile) {
-                    // iframe.contentWindow?.postMessage('vidio.playback.ui.hide_fullscreen', '*');
-                    // iframe.contentWindow?.postMessage('vidio.playback.ui.hide_vidio_logo', '*');
-                    // iframe.contentWindow?.postMessage('vidio.playback.ui.hide_topbar', '*');
-                    
-                    iframe.contentWindow?.postMessage('vidio.playback.ui.show_play_components_only', '*');
-                    
-                    
+                    iframe.contentWindow?.postMessage('vidio.playback.ui.hide_fullscreen', '*');
+                    iframe.contentWindow?.postMessage('vidio.playback.ui.hide_vidio_logo', '*');
+                    iframe.contentWindow?.postMessage('vidio.playback.ui.hide_topbar', '*');
                 } else {
                     iframe.contentWindow?.postMessage('vidio.playback.ui.show_components', '*');
                 }
@@ -614,6 +648,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+
+    const overlay = document.querySelector('.overlay-infoTools')
+    window.addEventListener("load", function () {
+        if (overlay) {
+            const hasVisited = localStorage.getItem("visited");
+            if (!hasVisited) {
+            overlay.style.display = "flex";
+            localStorage.setItem("visited", "true");
+            } else {
+                overlay.style.display = "none";
+            }
+        }
+    });
+    let splash = document.querySelector('.overlay-splash')
+    if (splash) {
+        setTimeout(() => {
+            splash.classList.add('opacity-0')
+            setTimeout(() => {
+                splash.classList.add('hidden')
+                
+            }, 1000);
+        }, 3000);
+    }
+
+    // let moreless = document.querySelectorAll('.moreLess');
+    // if (moreless) {
+    //     moreless?.forEach(item => {
+    //         const btn = item.querySelector('.moreLess-trigger');
+    //         btn.addEventListener('click', () => {
+    //             item.classList.toggle('--open');
+    //             btn.textContent = item.classList.contains('--open')
+    //             ? 'Sembunyikan'
+    //             : 'Selengkapnya';
+    //         });
+    //     });
+    // }
+    
+    
+    // let popupTrigger = document.querySelectorAll('[data-popup]')
+    // if (popupTrigger){
+    //     popupTrigger?.forEach(item => {
+    //         item.addEventListener("click", (e) => {
+    //             let popup = document.querySelector('[data-popup-open="'+item.dataset.popup+'"]')
+    //             popup.classList.add('--open')
+    //             e.preventDefault()
+    //         })
+    //     })
+    //     let popupClose = document.querySelectorAll('[data-popup-close]')
+    //     popupClose?.forEach(item => {
+    //         item.addEventListener("click", (e) => {
+    //             let popup = document.querySelector('[data-popup-open].--open')
+    //             popup.classList.remove('--open')
+    //             e.preventDefault()
+    //         })
+    //     })
+    // }
     
 })
 

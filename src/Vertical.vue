@@ -10,15 +10,20 @@ import Story4 from './assets/image/story-4.png';
 <!-- <div data-scroller class="relative flex flex-col w-full h-full bg-white lg:max-w-[780px] lg:h-[640px] lg:rounded-xl overflow-y-auto snap-y snap-mandatory"> -->
 <template>
     <Header6 class="hidden lg:block"/>
-    <main class="main relative w-full h-full overflow-hidden bg-zinc-900">
-        <div class="main-screen relative max-w-screen-md h-full mx-auto lg:py-20">
-            <div data-scroller class="main-body relative overflow-y-auto flex flex-col max-w-screen-md mx-auto h-full snap-y snap-mandatory scroll-smooth">
-                <VerticalItem :image="Story1"></VerticalItem>
-                <VerticalItem :image="Story2"></VerticalItem>
-                <VerticalItem :image="Story3"></VerticalItem>
-                <VerticalItem :image="Story4"></VerticalItem>
+    <main class="main relative w-full overflow-hidden flex h-svh bg-black justify-center items-center">
+        <div class="relative flex flex-col w-full h-full lg:max-w-[780px] lg:h-[640px]">
+            <div data-scroller class="main-body relative overflow-y-auto bg-white flex flex-col max-w-screen-md mx-auto w-full h-full snap-y snap-mandatory scroll-smooth lg:rounded-xl text-white dark:bg-zinc-900 dark:text-white lg:text-black lg:dark:text-white">
+                <VerticalItem :src="'https://www.vidio.com/embed/8913829-9-penjarah-rumah-uya-kuya-ditangkap?autoplay=true&player_only=true&mute=false&fluid_player=true'"></VerticalItem>
+                <VerticalItem :src="'https://www.vidio.com/embed/8913827-prabowo-ada-yang-mengarah-pada-makar-dan-terorisme?autoplay=true&player_only=true&mute=false&fluid_player=true'"></VerticalItem>
+                <VerticalItem :src="'https://www.vidio.com/embed/8913829-9-penjarah-rumah-uya-kuya-ditangkap?autoplay=true&player_only=true&mute=false&fluid_player=true'"></VerticalItem>
+                <VerticalItem :src="'https://www.vidio.com/embed/8913827-prabowo-ada-yang-mengarah-pada-makar-dan-terorisme?autoplay=true&player_only=true&mute=false&fluid_player=true'"></VerticalItem>
             </div>
-            <div class="main-nav absolute inset-x-0 top-0 px-4 pt-6 flex justify-between text-white lg:hidden">
+            <div class="main-nav absolute inset-x-0 top-0 px-4 pt-6 flex text-white justify-end lg:px-0 lg:pt-0 pointer-events-none">
+                <a href="./story.html" class="size-8 flex items-center justify-center rounded-full lg:size-12 lg:bg-white/10 lg:translate-x-full lg:-mr-3 pointer-events-auto">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1191 1.11914L1.11914 11.1191M1.11914 1.11914L11.1191 11.1191" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <!-- <div class="main-nav absolute inset-x-0 top-0 px-4 pt-6 flex justify-between text-white lg:hidden">
                 <label class="btn btn--sound group size-8 flex items-center justify-center lg:hidden">
                     <input type="checkbox" class="absolute opacity-0">
                     <svg class="group-has-checked:block hidden mute" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.19971 3.2002C3.444 2.9559 3.84015 2.95595 4.08447 3.2002L19.1997 18.3154C19.444 18.5598 19.444 18.9559 19.1997 19.2002C18.9554 19.4443 18.5592 19.4444 18.3149 19.2002L16.3247 17.21V18.5732C16.3247 19.4302 15.6299 20.1249 14.7729 20.125C13.7478 20.1249 12.7769 19.6628 12.1304 18.8672L10.6147 17.002C10.1638 16.4473 9.48682 16.1251 8.77197 16.125H7.19971C5.75011 16.1248 4.57471 14.9496 4.57471 13.5V8.5C4.57471 7.66944 4.96086 6.92916 5.56299 6.44824L3.19971 4.08496C2.95555 3.84072 2.95567 3.44451 3.19971 3.2002ZM6.45752 7.34277C6.07713 7.58735 5.82471 8.01416 5.82471 8.5V13.5C5.82471 14.2593 6.44047 14.8748 7.19971 14.875H8.77197C9.86336 14.8751 10.8972 15.3669 11.5854 16.2139L13.1001 18.0791C13.5093 18.5826 14.1241 18.8749 14.7729 18.875C14.9395 18.8749 15.0747 18.7398 15.0747 18.5732V15.96L6.45752 7.34277ZM14.7729 1.875C15.6299 1.87508 16.3247 2.56982 16.3247 3.42676V11.4404L15.0747 10.1904V3.42676C15.0747 3.26017 14.9395 3.12508 14.7729 3.125C14.1241 3.1251 13.5093 3.41737 13.1001 3.9209L11.5854 5.78613C11.4481 5.95522 11.2959 6.10935 11.1333 6.24902L10.2456 5.36133C10.3801 5.25484 10.5045 5.13365 10.6147 4.99805L12.1304 3.13281C12.7769 2.33722 13.7478 1.8751 14.7729 1.875Z" fill="currentColor"/></svg>
@@ -27,11 +32,11 @@ import Story4 from './assets/image/story-4.png';
                 <a href="./story.html" class="size-8 flex items-center justify-center rounded-full lg:size-12 lg:bg-white/10 lg:translate-x-full lg:ml-4">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1191 1.11914L1.11914 11.1191M1.11914 1.11914L11.1191 11.1191" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-            </div>
+            </div> -->
             <div class="btn-group hidden lg:flex absolute right-0 flex-col gap-3 p-3 inset-y-0 my-auto h-fit translate-x-full text-white">
-                <a href="./story.html" class=" size-12 flex items-center justify-center rounded-full bg-white/10 self-start">
+                <!-- <a href="./story.html" class=" size-12 flex items-center justify-center rounded-full bg-white/10 self-start">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1191 1.11914L1.11914 11.1191M1.11914 1.11914L11.1191 11.1191" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
+                </a> -->
                 <a href="#" aria-label="prevpage" class="btn btn--page btn--page-prev flex flex-col items-center gap-0.5">
                     <i class="flex items-center justify-center size-12 bg-white/10 rounded-full">
                         <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.9506 0.526344L15.7761 7.35182C16.2752 7.85091 16.2752 8.66028 15.7761 9.15937C15.277 9.65846 14.4676 9.65846 13.9669 9.15937L8.04684 3.18811L2.12676 9.057C1.6309 9.37852 0.981444 9.31933 0.551146 8.91463C0.122445 8.50994 0.0265014 7.8637 0.317608 7.35183L7.14308 0.526363C7.64217 0.0272695 8.4515 0.0272513 8.9506 0.526344Z" fill="currentColor"/></svg>

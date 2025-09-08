@@ -30,8 +30,8 @@ import Bincang from './assets/image/bincang-color.png';
                         <button class="tab-btn" data-filter=".terpopuler">Terpopuler</button>
                     </div>
                 </div>
-                <div class="video-tab-grid *:*:dark:hover:shadow-white/20">
-                        <div class="video-card terkini">
+                <div class="tab-grid *:*:dark:hover:shadow-white/20">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News1" alt="">
@@ -52,7 +52,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News2" alt="">
@@ -73,7 +73,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -94,7 +94,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -115,7 +115,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News1" alt="">
@@ -136,7 +136,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News2" alt="">
@@ -157,7 +157,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -178,7 +178,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -199,7 +199,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News1" alt="">
@@ -220,7 +220,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News2" alt="">
@@ -241,7 +241,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -262,7 +262,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -283,7 +283,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -304,7 +304,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -325,7 +325,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -346,7 +346,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -367,7 +367,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -388,7 +388,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -409,7 +409,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -430,7 +430,7 @@ import Bincang from './assets/image/bincang-color.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">

@@ -18,14 +18,14 @@ import News4 from './assets/image/news-4.png';
                     <span class="section__title__text">
                         NEWS
                     </span>
-                    <div class="tab-filter *:border-gray-200 *:hover:bg-[#FFF0E6] *:dark:bg-orange-800">
+                    <div class="tab-filter *:border-gray-200 *:hover:bg-[#FFF0E6]">
                         <button class="tab-btn  active" data-filter="*">Semua</button>
                         <button class="tab-btn" data-filter=".terkini">Terkini</button>
                         <button class="tab-btn" data-filter=".terpopuler">Terpopuler</button>
                     </div>
                 </div>
-                <div class="video-tab-grid *:*:dark:hover:shadow-white/20">
-                        <div class="video-card terkini">
+                <div class="tab-grid *:*:dark:hover:shadow-white/20">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News1" alt="">
@@ -46,7 +46,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News2" alt="">
@@ -67,7 +67,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -88,7 +88,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -109,7 +109,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News1" alt="">
@@ -130,7 +130,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News2" alt="">
@@ -151,7 +151,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -172,7 +172,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -193,7 +193,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News1" alt="">
@@ -214,7 +214,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News2" alt="">
@@ -235,7 +235,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -256,7 +256,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -277,7 +277,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -298,7 +298,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -319,7 +319,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -340,7 +340,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -361,7 +361,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -382,7 +382,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">
@@ -403,7 +403,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terpopuler">
+                        <div class="card terpopuler">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News3" alt="">
@@ -424,7 +424,7 @@ import News4 from './assets/image/news-4.png';
                                 </div>
                             </a>
                         </div>
-                        <div class="video-card terkini">
+                        <div class="card terkini">
                             <a href="#" class="item group">
                                 <figure class="item__figure">
                                     <img class="item__figure__img" :src="News4" alt="">

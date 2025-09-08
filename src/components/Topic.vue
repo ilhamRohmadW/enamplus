@@ -12,18 +12,18 @@
                 </a>
             </div>
             <ul class="topik-list text-black">
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Vaksin</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Gaza</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Prabowo</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Ormas</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Ganjar Pranowo</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Bebaskan Gaza</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Prancis</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Apel</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Jakarta</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Videotron</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Megalodon</a></li>
-                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white" href="/">Pameran</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Vaksin</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Gaza</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Prabowo</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Ormas</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Ganjar Pranowo</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Bebaskan Gaza</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Prancis</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Apel</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Jakarta</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Videotron</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Megalodon</a></li>
+                <li class="topik-list__item"><a class="topik-list__link bg-gray-200 hover:bg-primary hover:text-white dark:bg-white/20 dark:text-white" href="/">Pameran</a></li>
             </ul>
         </div>
     </div>

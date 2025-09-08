@@ -1,21 +1,8 @@
 @reference "tailwindcss"
 @reference "../theme.css"
-.tab
-    &-filter
-        @apply flex gap-2
-    &-btn
-        @apply font-semibold border text-sm rounded-full px-4 py-2 
-        &:hover,
-        &.active
-            @apply text-primary border-primary/20 bg-primary/10
 
-.video
-    &-tab
-        &-grid
-            @apply flex flex-wrap -mx-2 mt-6 
-    &-card
-        @apply w-full px-2 mb-6 
-        @apply sm:w-1/3 md:w-1/4 lg:w-1/5
+.tab
+    .card
         .item__figure
             @apply relative
 
