@@ -13,14 +13,24 @@ import Story5 from './assets/image/story-5.png';
     <main class="main flex flex-col mb-6 lg:mb-10">
         <section class="section section--story dark:text-white">
             <div class="container">
-                <div class="section__title">
+                <div class="section__title flex-col items-start">
                     <span class="section__title__text">
                         STORY
                     </span>
-                    <div class="tab-filter *:border-gray-200 *:hover:bg-[#FFF0E6]">
-                        <button class="tab-btn  active" data-filter="*">Semua</button>
-                        <button class="tab-btn" data-filter=".terkini">Terkini</button>
-                        <button class="tab-btn" data-filter=".terpopuler">Terpopuler</button>
+                    <div class="tab-filter *:bg-gray-100 *:hover:bg-primary *:hover:text-white whitespace-nowrap overflow-x-auto w-full">
+                        <button class="tab-btn active" data-filter="*">Semua</button>
+                        <!-- <button class="tab-btn" data-filter=".terkini">Terkini</button>
+                        <button class="tab-btn" data-filter=".terpopuler">Terpopuler</button> -->
+                        <button class="tab-btn" data-filter="">Vaksin</button>
+                        <button class="tab-btn" data-filter="">Gaza</button>
+                        <button class="tab-btn" data-filter="">Prabowo</button>
+                        <button class="tab-btn" data-filter="">Ormas</button>
+                        <button class="tab-btn" data-filter="">Ganjar Pranowo</button>
+                        <button class="tab-btn" data-filter="">Bebaskan Gaza</button>
+                        <button class="tab-btn" data-filter="">Islamophobia Prancis</button>
+                        <button class="tab-btn" data-filter="">Bebaskan Gaza</button>
+                        <button class="tab-btn" data-filter="">Ormas</button>
+                        <button class="tab-btn" data-filter="">Bebaskan Gaza</button>
                     </div>
                 </div>
                 <div class="tab-grid *:*:dark:hover:shadow-white/20">
