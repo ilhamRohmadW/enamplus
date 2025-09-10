@@ -17,6 +17,7 @@ export default defineConfig({
         readpage: './readpage.html',
         indexSpecial: './indexSpecial.html',
         story: './story.html',
+        story2: './story2.html',
         vertical: './vertical.html',
       },
       output: {

@@ -1,11 +1,11 @@
 <script setup>
-defineProps(['src']);
+defineProps(['src','title','desc']);
 </script>
 <template>
     <div data-section="player" class="player relative shrink-0 transition h-full flex items-start snap-always snap-start overflow-hidden ">
         <iframe class="vidio-embed w-full h-full lg:max-w-[360px] bg-black"
         :data-src="src"
-        width="560" height="317" frameborder="0" allowfullscreen></iframe>
+        width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
         <div class="absolute bottom-0 pb-20 left-0 w-full bg-gradient-to-t gap-4 px-4 from-black/30 flex lg:items-stretch lg:flex-col from-90% to-transparent items-end pt-8 pointer-events-none lg:pb-8 lg:static lg:bg-none">
             <div class="description">
                 <svg class="shrink-0 h-4 w-auto mb-4 lg:text-orange-600" width="42" height="12" viewBox="0 0 42 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,19 +15,10 @@ defineProps(['src']);
                     <path d="M27.5059 0H24.5918V12H26.4203V3.51429L27.9821 12H29.9629L31.4105 3.39429V12H33.3913V0H30.4772L29.0487 8.52L27.5059 0Z" fill="currentColor"/>
                     <path d="M39.2137 0H37.7345V2.5601H35.1934V4.03927H37.7345V6.63729H39.2137V4.03927H41.7548V2.5601H39.2137V0Z" fill="currentColor"/>
                 </svg>  
-                <h1 class="title text-sm lg:text-xl font-bold mb-2">VIDEO: Revolusi Medis! Klinik Australia Uji AI Untuk Deteksi Kanker Kulit Tanpa Biopsi</h1>
-                <p class="truncate-paragraph text-xs line-clamp-2 mb-2 pointer-events-auto max-h-72">
-                    This is a long string that exceeds the maximum length set for display purposes. It contains more information that might be relevant to the user, but we want to keep the initial display concise.
-                    This is a long string that exceeds the maximum length set for display purposes. It contains more information that might be relevant to the user, but we want to keep the initial display concise.
-                    This is a long string that exceeds the maximum length set for display purposes. It contains more information that might be relevant to the user, but we want to keep the initial display concise.
-                    This is a long string that exceeds the maximum length set for display purposes. It contains more information that might be relevant to the user, but we want to keep the initial display concise.
-                    This is a long string that exceeds the maximum length set for display purposes. It contains more information that might be relevant to the user, but we want to keep the initial display concise.
-                    This is a long string that exceeds the maximum length set for display purposes. It contains more information that might be relevant to the user, but we want to keep the initial display concise.
-                    This is a long string that exceeds the maximum length set for display purposes. It contains more information that might be relevant to the user, but we want to keep the initial display concise.
-                    This is a long string that exceeds the maximum length set for display purposes. It contains more information that might be relevant to the user, but we want to keep the initial display concise.
-                </p>
+                <h1 class="title text-sm lg:text-xl font-bold mb-2">{{ title }}</h1>
+                <p class="truncate-paragraph text-xs line-clamp-2 mb-2 pointer-events-auto max-h-72" v-html="desc"></p>
                 <div class="flex justify-between gap-2">
-                    <p class="text-xs">1 jam lalu</p>
+                    <p class="text-xs text-neutral-100 lg:text-neutral-400">1 jam lalu</p>
                     <span class="truncate-toggle text-xs font-bold pointer-events-auto">Selengkapnya</span>
                 </div>
             </div>
@@ -49,14 +40,14 @@ defineProps(['src']);
                 </label>
                 <div class="share group/share relative">
                     <div class="share-btn flex flex-col items-center justify-center text-xs cursor-pointer lg:flex-row">
-                        <div class="size-10 rounded-full flex items-center justify-center hover:bg-neutral-800 lg:hover:bg-transparent">
+                        <div class="size-10 rounded-full flex items-center justify-center hover:bg-neutral-800 lg:hover:bg-transparent group-[.--collapsed]/share:bg-white group-[.--collapsed]/share:text-black lg:group-[.--collapsed]/share:bg-transparent lg:group-[.--collapsed]/share:text-primary">
                             <svg class="shrink-0 size-5" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19.8994 19.7002C19.8994 18.4299 18.8699 17.4004 17.5996 17.4004C16.7961 17.4004 16.089 17.8122 15.6777 18.4365C15.6622 18.4722 15.6461 18.5085 15.626 18.543C15.6059 18.5774 15.582 18.6086 15.5586 18.6396C15.3934 18.957 15.2998 19.3177 15.2998 19.7002C15.2999 20.9704 16.3294 22 17.5996 22C18.8698 22 19.8993 20.9704 19.8994 19.7002ZM6.69922 12C6.69922 10.7297 5.66967 9.7002 4.39941 9.7002C3.12925 9.7003 2.09961 10.7298 2.09961 12C2.09961 13.2702 3.12925 14.2997 4.39941 14.2998C5.66967 14.2998 6.69922 13.2703 6.69922 12ZM19.8994 4.2998C19.8993 3.02964 18.8698 2 17.5996 2C16.3294 2 15.2999 3.02964 15.2998 4.2998C15.2998 5.57006 16.3294 6.59961 17.5996 6.59961C18.8699 6.59961 19.8994 5.57006 19.8994 4.2998ZM21.8994 4.2998C21.8994 6.67463 19.9744 8.59961 17.5996 8.59961C16.3769 8.59961 15.2742 8.08885 14.4912 7.26953L8.51562 10.7568C8.63437 11.1505 8.69922 11.5676 8.69922 12C8.69922 12.4321 8.6342 12.8488 8.51562 13.2422L14.4951 16.7256C15.2778 15.9089 16.3791 15.4004 17.5996 15.4004C19.9744 15.4004 21.8994 17.3254 21.8994 19.7002C21.8993 22.0749 19.9744 24 17.5996 24C15.2248 24 13.2999 22.0749 13.2998 19.7002C13.2998 19.2662 13.3638 18.8471 13.4834 18.4521L7.50781 14.9697C6.72488 15.7889 5.62206 16.2998 4.39941 16.2998C2.02468 16.2997 0.0996094 14.3748 0.0996094 12C0.0996095 9.62524 2.02468 7.7003 4.39941 7.7002C5.6218 7.7002 6.72491 8.21039 7.50781 9.0293L13.4824 5.54297C13.3638 5.14943 13.2998 4.73203 13.2998 4.2998C13.2999 1.92507 15.2248 0 17.5996 0C19.9744 1.25628e-06 21.8993 1.92507 21.8994 4.2998Z" fill="currentColor"/>
                             </svg>
                         </div>
-                        <span>Share</span>
+                        <span class=" lg:group-[.--collapsed]/share:text-primary">Share</span>
                     </div>
-                    <div class="share__dropdown bg-white text-black   absolute bottom-0 right-full lg:bottom-auto lg:top-full lg:right-0 lg:translate-x-0 lg:-translate-y-4 pointer-events-none translate-x-4 transition-all duration-300 ease-in-out opacity-0 font-medium rounded-lg text-xs shadow-[0_10px_40px_10px_rgba(0,0,0,0.16)] group-[.--collapsed]/share:translate-x-0 group-[.--collapsed]/share:translate-y-0 group-[.--collapsed]/share:opacity-100 group-[.--collapsed]/share:pointer-events-auto ">
+                    <div class="share__dropdown bg-white text-black  dark:bg-black dark:text-white absolute bottom-0 right-full lg:bottom-auto lg:top-full lg:right-0 lg:translate-x-0 lg:-translate-y-4 pointer-events-none translate-x-4 transition-all duration-300 ease-in-out opacity-0 font-medium rounded-lg text-xs shadow-[0_10px_40px_10px_rgba(0,0,0,0.16)] group-[.--collapsed]/share:translate-x-0 group-[.--collapsed]/share:translate-y-0 group-[.--collapsed]/share:opacity-100 group-[.--collapsed]/share:pointer-events-auto ">
                         <div class="share__dropdown__content   p-4">
                             <div class="share__social   flex items-center justify-center gap-5 mb-5">
                                 <a href="#" target="_blank" class="share__social__button share__social__button--facebook   flex transition-transform duration-300 ease-in-out hover:scale-125 *:pointer-events-none">
@@ -91,23 +82,12 @@ defineProps(['src']);
                                 <span>Copy Link</span>
                             </a>
                         </div>
-                        <div class="share__dropdown__bottom border-neutral-200   border-t">
+                        <div class="share__dropdown__bottom border-neutral-200   border-t dark:border-neutral-700">
                             <a href="#" class="share__cancel hover:text-primary   py-2 block text-center transition-colors duration-300 ease-in-out">Batalkan</a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="comment">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur beatae itaque optio earum laboriosam porro hic laborum doloribus deleniti, a quibusdam consequuntur, reiciendis neque odio sed iusto nostrum deserunt!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur beatae itaque optio earum laboriosam porro hic laborum doloribus deleniti, a quibusdam consequuntur, reiciendis neque odio sed iusto nostrum deserunt!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur beatae itaque optio earum laboriosam porro hic laborum doloribus deleniti, a quibusdam consequuntur, reiciendis neque odio sed iusto nostrum deserunt!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur beatae itaque optio earum laboriosam porro hic laborum doloribus deleniti, a quibusdam consequuntur, reiciendis neque odio sed iusto nostrum deserunt!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur beatae itaque optio earum laboriosam porro hic laborum doloribus deleniti, a quibusdam consequuntur, reiciendis neque odio sed iusto nostrum deserunt!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur beatae itaque optio earum laboriosam porro hic laborum doloribus deleniti, a quibusdam consequuntur, reiciendis neque odio sed iusto nostrum deserunt!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur beatae itaque optio earum laboriosam porro hic laborum doloribus deleniti, a quibusdam consequuntur, reiciendis neque odio sed iusto nostrum deserunt!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur beatae itaque optio earum laboriosam porro hic laborum doloribus deleniti, a quibusdam consequuntur, reiciendis neque odio sed iusto nostrum deserunt!
-            </div> -->
         </div>
     </div>
 </template>

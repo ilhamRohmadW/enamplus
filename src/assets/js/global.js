@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("load", () => {
     
     var checkMode = localStorage.getItem("mode");
     
@@ -138,11 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Isotope filter
     const grid = document.querySelector('.tab-grid');
     if (grid) {
-        setTimeout(() => {
-            const iso = new Isotope(grid, {
-                itemSelector: '.card',
-                layoutMode: 'fitRows'
-            });
+        // setTimeout(() => {
+                const iso = new Isotope(grid, {
+                    itemSelector: '.card',
+                    layoutMode: 'fitRows'
+                });
             
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.addEventListener('click', function () {
@@ -152,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     iso.arrange({ filter: filterValue });
                 });
             });
-        }, 100);
+        // }, 100);
     }
     
     function hoverMouseSwiper(container,func) {
@@ -576,7 +577,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     } else {
                         console.log("Web Share API is not supported in your browser.");
-                        item.classList.add('--collapsed')
+                        item.classList.toggle('--collapsed')
                         // social media share
                         item.querySelector('.share__social__button--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(shareUrl) +"%2F&amp;src=sdkpreparse"
                         item.querySelector('.share__social__button--x').href = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(shareUrl) + "&text=" + encodeURIComponent(shareTitle)
@@ -602,11 +603,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault()
                 })
                 // click outside
-                document.addEventListener('click', (e) => {
-                    if (!item.contains(e.target)) {
-                        item.classList.remove('--collapsed')
-                    }
-                });
+                // document.addEventListener('click', (e) => {
+                //     if (!item.contains(e.target)) {
+                //         item.classList.remove('--collapsed')
+                //     }
+                // });
             });
             console.groupEnd(); 
             
@@ -650,17 +651,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     const overlay = document.querySelector('.overlay-infoTools')
-    window.addEventListener("load", function () {
-        if (overlay) {
-            const hasVisited = localStorage.getItem("visited");
-            if (!hasVisited) {
-            overlay.style.display = "flex";
-            localStorage.setItem("visited", "true");
-            } else {
-                overlay.style.display = "none";
-            }
+    if (overlay) {
+        const hasVisited = localStorage.getItem("visited");
+        if (!hasVisited) {
+        overlay.style.display = "flex";
+        localStorage.setItem("visited", "true");
+        } else {
+            overlay.style.display = "none";
         }
-    });
+    }
     let splash = document.querySelector('.overlay-splash')
     if (splash) {
         setTimeout(() => {
