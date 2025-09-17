@@ -3,7 +3,7 @@
     import News2 from '../assets/image/news-2.png';
     import News3 from '../assets/image/news-3.png';
     import News4 from '../assets/image/news-4.png';
-    defineProps(['title','titleIcon'])
+    defineProps(['title','titleIcon']);
 </script>
 
 <template>

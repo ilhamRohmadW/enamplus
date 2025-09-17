@@ -31,7 +31,7 @@ var items = ref([
 <template>
     <Header6 class="hidden lg:block"/>
     <main class="main relative w-full overflow-hidden flex h-svh bg-black justify-center items-center">
-        <div class="relative flex flex-col w-full h-full lg:max-w-[780px] lg:h-[640px]">
+        <div class="main-wrapper relative flex flex-col w-full h-full lg:max-w-[780px] lg:h-[640px]">
             <div data-scroller class="main-body relative overflow-y-auto bg-white flex flex-col max-w-screen-md mx-auto w-full h-full snap-y snap-mandatory scroll-smooth lg:rounded-xl text-white dark:bg-zinc-900 dark:text-white lg:text-black lg:dark:text-white">
                 <!-- <template v-for="item in items"> -->
                     <VerticalItem 
@@ -96,5 +96,16 @@ var items = ref([
     </main>
 </template>
 <style>
-@import './assets/sass/components/vertical.css';
+    @import './assets/sass/components/vertical.css';
+
+    @media (width >= 64rem) and (height <= 48rem) {
+        .main-wrapper{
+            height: 100%;
+            padding-block: 1rem;
+            
+        }
+        .main-nav{
+            top: 1rem
+        }
+    }
 </style>
